@@ -1,17 +1,75 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border" [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Student Identity </ion-title>
+    <div class="logout" slot="end">
+      <ion-icon
+        name="log-out-outline"
+        slot="end"
+        (click)="presentAlert()"
+      ></ion-icon>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="header">
+    <!-- <img src="assets/louis.jpg" /> -->
+    <div class="card">
+      <!-- <table>
+        <tr>
+          <th><h5>Name</h5></th>
+          <th><h5>: {{nama}}</h5></th>
+        </tr>
+        <tr>
+          <td><h5>NPM</h5></td>
+          <td><h5>: {{npm}}</h5></td>
+        </tr>
+      </table> -->
+      <div class="identity">
+        <div class="title">
+          <h5>Nama</h5>
+          <h5>NPM</h5>
+        </div>
+        <div class="value">
+          <h5>: {{ nama }}</h5>
+          <h5>: {{ npm }}</h5>
+        </div>
+      </div>
+    </div>
+    <qr-code value="{{npm}}" size="70" errorCorrectionLevel="M"></qr-code>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="line"></div>
+
+  <div class="lokasi">
+    <ion-item lines="full">
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label class="ion-text-wrap">
+        <h4>
+          Location of Binaniaga University (Informatics And Computer Major)
+        </h4>
+      </ion-label>
+    </ion-item>
+    <ion-card class="maps">
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="600"
+            height="350"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=STIKOM%20Binaniaga%20Bogor&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+
+          <!-- <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style> -->
+        </div>
+      </div>
+    </ion-card>
+  </div>
 </ion-content>

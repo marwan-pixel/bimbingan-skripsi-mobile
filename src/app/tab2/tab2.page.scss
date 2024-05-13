@@ -1,0 +1,142 @@
+ion-header {
+  --background: #fff;
+}
+ion-toolbar {
+  --background: #fff;
+  color: #000000;
+  // border-radius: 0px 0px 15px 15px;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+ion-content {
+  --background: #fff;
+}
+
+table {
+  tr {
+    td {
+      h5 {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.tahunajaran {
+  ion-input.thn_akademik {
+    --background: #fff;
+    --color: #003d79;
+    height: 30px;
+    width: 110px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  ion-item {
+    --background: transparent;
+    color: white;
+  }
+  width: 100%;
+  // height: 40px;
+  border-radius: 0px 0px 120px 0px;
+  background: #003d79;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 20px;
+
+  h4 {
+    text-align: left;
+    margin-right: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.info {
+  // position: absolute;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+  color: #000000;
+  margin-left: 20px;
+  margin-right: 20px;
+  h5 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.input {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+  flex-direction: column;
+  max-height: fit-content;
+  background: #003d79;
+  border-radius: 15px;
+
+  color: #fff;
+
+  h4 {
+    margin-top: 15px;
+    // margin-left: 200px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  ion-card {
+    background: #fff;
+    border-radius: 10px;
+    mix-blend-mode: lighten;
+  }
+  ion-card.inputImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: normal;
+    color: #000000;
+
+    ion-input {
+      color: #000000;
+    }
+  }
+
+  // ion-icon{
+  //     color: #295a87;
+  // }
+}
+ion-skeleton-text {
+  margin-right: 20px;
+  height: 20px;
+  width: 50%;
+  border-radius: 0;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  --border-radius: 5px;
+}
+
+ion-button {
+  margin-top: 20px;
+  --background: #c49e4f;
+  width: 150px;
+  height: 40px;
+
+  color: #ffff;
+  --border-radius: 5px;
+}

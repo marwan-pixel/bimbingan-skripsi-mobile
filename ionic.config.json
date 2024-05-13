@@ -1,5 +1,8 @@
 {
   "name": "aplikasi-bimbingan",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

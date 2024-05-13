@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BimApp</string>
+    <string name="title_activity_main">BimApp</string>
+    <string name="package_name">com.bimbinganskripsi.app</string>
+    <string name="custom_url_scheme">com.bimbinganskripsi.app</string>
+</resources>

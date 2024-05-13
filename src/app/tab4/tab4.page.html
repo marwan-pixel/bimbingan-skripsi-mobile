@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Campus Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="header">
+    <img src="assets/bg.png" />
+  </div>
+
+  <div class="content" *ngFor="let i of data">
+    <div *ngIf="i.proposal !== ''">
+      <div class="chat-kiri">
+        <div class="ballon1">
+          <div class="foto1">
+            <img src="assets/logo unbin-1.jpg" />
+            <h5>Proposal Info</h5>
+          </div>
+          <div class="line"></div>
+          <h6>{{ i.proposal }}</h6>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="i.skripsi !== ''">
+      <div class="chat-kanan">
+        <div class="ballon2">
+          <div class="foto2">
+            <img src="assets/logo unbin-1.jpg" />
+            <h5>Skripsi Info</h5>
+          </div>
+          <div class="line2"></div>
+          <h6>{{ i.skripsi }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
